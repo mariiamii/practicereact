@@ -7,6 +7,7 @@ let ShibaItem = (props) => {
     <div>
       <li>Name: {props.name}</li>
       <li>Gender: {props.gender}</li>
+      <img src={props.imgURL} alt="shiba"/>
     </div>
   ) 
 }
