@@ -1,10 +1,11 @@
+import React from 'react';
 import './App.css';
-import Gallery from './components/Gallery.js'
+import ShibaContainer from './ShibaContainer'
 
 function App() {
   return (
-    <div class="App">
-      <Gallery />
+    <div className="App">
+      <ShibaContainer title="Here is a list of Shibas:"/>
     </div>
   );
 }
