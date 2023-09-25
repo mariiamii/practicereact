@@ -3,11 +3,13 @@ import React from 'react';
 
 let ShibaItem = (props) => {
     // console.log("PROPS OF SHIBA ITEM:", props)
+    let {name, gender, imgURL} = props // destructuring
+    
   return(
     <div>
-      <li>Name: {props.name}</li>
-      <li>Gender: {props.gender}</li>
-      <img src={props.imgURL} alt="shiba"/>
+      <li>Name: {name}</li>
+      <li>Gender: {gender}</li>
+      <img src={imgURL} alt="shiba"/>
     </div>
   ) 
 }

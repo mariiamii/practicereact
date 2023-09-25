@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import ShibaItem from './ShibaItem';
 
 let ShibaContainer = (props) => { // arrow fn component
