@@ -2,14 +2,19 @@ import React from 'react';
 // import { shibas } from './shibas.js'
 
 let ShibaItem = (props) => {
-    // console.log("PROPS OF SHIBA ITEM:", props)
-    let {name, gender, imgURL} = props // destructuring
-    
+  // console.log("PROPS OF SHIBA ITEM:", props)
+  let {name, gender, imgURL} = props // destructuring
+
+  let handleClick = () => { // callback fn
+    console.log("❤️ for " + props.name)
+  }
+  
   return(
     <div>
+      <img src={imgURL} alt="shiba"/>
       <li>Name: {name}</li>
       <li>Gender: {gender}</li>
-      <img src={imgURL} alt="shiba"/>
+      <button onClick={handleClick}>❤️</button>
     </div>
   ) 
 }
