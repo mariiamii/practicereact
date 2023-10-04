@@ -12,38 +12,54 @@ let ShibaContainer = (props) => { // arrow fn component
 
   return (
     <main>
-      {/* <p>{props.title}</p> */}
       <label>
         Search for a Shiba by name: <input name="myInput" />
       </label>
-      {/* <button onClick={() => handleChange()}>Click me</button> */}
-      <div>
-            <ShibaItem 
-              id={1} 
-              name="Charlie" 
-              gender="male"
-              imgURL= "https://www.akc.org/wp-content/uploads/2017/11/Shiba-Inu-puppy-standing-outdoors.jpg"
-            />
-            <ShibaItem 
-              id={2} 
-              name="Felix" 
-              gender="male"
-              imgURL="https://everylittlename.com/wp-content/uploads/2022/07/shiba-inu-standing-grass.jpg"
-            />
-            <ShibaItem 
-              id={3} 
-              name="Lilo" 
-              gender="female"
-              imgURL="https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_620/MTk2MzA1MDEwMTg5OTM1OTIw/strong-and-feminine-shiba-inu-names.webp"
-            />
-            <ShibaItem 
-              id={4} 
-              name="Eevee" 
-              gender="female"
-              imgURL="https://i.pinimg.com/1200x/67/5a/8e/675a8e274eaea3ba80200c0979386eab.jpg"
-            />
-      </div>
+      <ul>
+        {data.map((shiba) => (
+            <li className="shiba-list" key={shiba.id}>
+              <img src={shiba.img} alt="shiba" className="shiba-img"/>
+              <br></br>
+              {shiba.name}
+            </li>
+        ))}
+      </ul>
     </main>
+
+
+    // <main>
+    //   {/* <p>{props.title}</p> */}
+    //   <label>
+    //     Search for a Shiba by name: <input name="myInput" />
+    //   </label>
+    //   {/* <button onClick={() => handleChange()}>Click me</button> */}
+    //   <div>
+    //         <ShibaItem 
+    //           id={1} 
+    //           name="Charlie" 
+    //           gender="male"
+    //           imgURL= "https://www.akc.org/wp-content/uploads/2017/11/Shiba-Inu-puppy-standing-outdoors.jpg"
+    //         />
+    //         <ShibaItem 
+    //           id={2} 
+    //           name="Felix" 
+    //           gender="male"
+    //           imgURL="https://everylittlename.com/wp-content/uploads/2022/07/shiba-inu-standing-grass.jpg"
+    //         />
+    //         <ShibaItem 
+    //           id={3} 
+    //           name="Lilo" 
+    //           gender="female"
+    //           imgURL="https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_620/MTk2MzA1MDEwMTg5OTM1OTIw/strong-and-feminine-shiba-inu-names.webp"
+    //         />
+    //         <ShibaItem 
+    //           id={4} 
+    //           name="Eevee" 
+    //           gender="female"
+    //           imgURL="https://i.pinimg.com/1200x/67/5a/8e/675a8e274eaea3ba80200c0979386eab.jpg"
+    //         />
+    //   </div>
+    // </main>
   )
 } 
 
