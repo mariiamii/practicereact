@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 import ShibaItem from './ShibaItem';
+import data from './data.js'
 
 let ShibaContainer = (props) => { // arrow fn component
   // console.log("THIS IS THE PROPS OF SHIBA CONTAINER:", props)
-  let [changeText, setChangeText] = useState(true);
+  // let [changeText, setChangeText] = useState(true);
 
-  const handleChange = () => {
-    return setChangeText(!changeText);
-  }
+  // const handleChange = () => {
+  //   return setChangeText(!changeText);
+  // }
 
   return (
     <main>
-      <p>{props.title}</p>
-      <button onClick={() => handleChange()}>Click me</button>
+      {/* <p>{props.title}</p> */}
+      <label>
+        Search for a Shiba by name: <input name="myInput" />
+      </label>
+      {/* <button onClick={() => handleChange()}>Click me</button> */}
       <div>
-        {changeText ? (
-          <>
             <ShibaItem 
               id={1} 
               name="Charlie" 
@@ -27,10 +29,7 @@ let ShibaContainer = (props) => { // arrow fn component
               name="Felix" 
               gender="male"
               imgURL="https://everylittlename.com/wp-content/uploads/2022/07/shiba-inu-standing-grass.jpg"
-            /> 
-          </>
-          ) : (
-          <>
+            />
             <ShibaItem 
               id={3} 
               name="Lilo" 
@@ -43,9 +42,6 @@ let ShibaContainer = (props) => { // arrow fn component
               gender="female"
               imgURL="https://i.pinimg.com/1200x/67/5a/8e/675a8e274eaea3ba80200c0979386eab.jpg"
             />
-          </>
-          )
-        }
       </div>
     </main>
   )
