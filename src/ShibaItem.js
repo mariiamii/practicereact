@@ -11,7 +11,7 @@ let ShibaItem = (props) => {
   
   return(
     <div>
-      <img src={imgURL} alt="shiba"/>
+      <img src={imgURL} alt="shiba" className="shiba-img"/>
       <li>Name: {name}</li>
       <li>Gender: {gender}</li>
       <button onClick={handleClick}>❤️</button>
