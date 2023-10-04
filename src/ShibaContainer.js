@@ -9,7 +9,7 @@ let ShibaContainer = (props) => { // arrow fn component
         Search for a Shiba by name: <input name="myInput" />
       </label>
 
-      <ul>
+      <ul className="shiba-list">
         {data.map((shiba) => (
           <ShibaItem 
             name={shiba.name}
