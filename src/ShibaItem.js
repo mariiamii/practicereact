@@ -10,7 +10,7 @@ let ShibaItem = (props) => {
   return(
     <div>
       <img src={image} alt="shiba" className="shiba-img"/>
-      <li>Name: {name}</li>
+      <p>Name: {name}</p>
       {/* <button onClick={handleClick}>❤️</button> */}
     </div>
   ) 

@@ -43,7 +43,15 @@
   height: 250px;
 }
 
-.shiba-list {
+.shiba-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 5rem;
+}
+
+.shiba-ul {
   list-style-type: none;
 }
 

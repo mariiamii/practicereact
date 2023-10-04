@@ -6,17 +6,19 @@ let ShibaContainer = (props) => { // arrow fn component
   return (
     <main>
       <label>
-        Search for a Shiba by name: <input name="myInput" />
+        Search for a Shiba by name: <input name='myInput' />
       </label>
 
-      <ul className="shiba-list">
-        {data.map((shiba) => (
-          <ShibaItem 
-            name={shiba.name}
-            image={shiba.img}
-          />
-        ))}
-      </ul>
+      <div className='shiba-container'>
+        <ul className='shiba-ul'>
+          {data.map((shiba) => (
+            <ShibaItem 
+              name={shiba.name}
+              image={shiba.img}
+            />
+          ))}
+        </ul>
+      </div>
     </main>
   )
 } 
