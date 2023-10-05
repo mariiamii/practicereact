@@ -6,7 +6,7 @@ let ShibaContainer= (props) => {
   // Syntax: const [state, setState] = useState(initialState);
   const [inputText, setInputText] = useState("");
 
-  let inputHandler = (e) => {
+  let inputHandler = (e) => { // event.target
     let lowerCase = e.target.value.toLowerCase();
     setInputText(lowerCase);
   }
