@@ -1,25 +1,25 @@
-import React from 'react';
-import data from './data.js'
+import { React, useState } from 'react';
 import ShibaItem from './ShibaItem'
 
 let ShibaContainer = (props) => { // arrow fn component
-  return (
-    <main>
-      <label>
-        Search for a Shiba by name: <input name='myInput' />
-      </label>
+  const [inputText, setInputText] = useState("");
 
-      <div className='shiba-container'>
-        <ul className='shiba-ul'>
-          {data.map((shiba) => (
-            <ShibaItem 
-              name={shiba.name}
-              image={shiba.img}
-            />
-          ))}
-        </ul>
-      </div>
-    </main>
+  let inputHandler = (e) => {
+    let lowerCase = e.target.value.toLowerCase();
+    setInputText(lowerCase);
+  }
+  
+  return (
+    <div>
+      <label>
+        Search for a Shiba by name: 
+        <input 
+          name='myInput' 
+          onChange={inputHandler}
+        />
+      </label>
+      <ShibaItem input={inputText}/>
+    </div>
   )
 } 
 
