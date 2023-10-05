@@ -1,21 +1,24 @@
 import React from 'react';
 import data from './data.js'
 
+// Exercise practice:
 let ShibaItem = (props) => {
-  let filteredData = data.filter((jokePOJO) => {
+  let filteredData = data.filter((exercisePOJO) => {
     if (props.input === '') {
-      return jokePOJO
+      return exercisePOJO
     } else {
-      return jokePOJO.joke.toLowerCase().includes(props.input)
+      return exercisePOJO.name.toLowerCase().includes(props.input)
     }
   })
 
   return (
     <div className='shiba-container'>
-      {filteredData.map((jokes) => (
+      {filteredData.map((exercise) => (
         <ul className='shiba-ul'>
             <li>
-              <p>{jokes.joke}</p>
+              <p>Name: {exercise.name}</p>
+              <p>Difficulty: {exercise.difficulty}</p>
+              <p>Equipment: {exercise.equipment}</p>
             </li>
         </ul>
       ))}
@@ -52,8 +55,7 @@ export default ShibaItem;
 
 
 
-
-
+// Shibas:
 // let ShibaItem = (props) => {
 //   // let {name, image} = props // destructuring
 
@@ -91,3 +93,28 @@ export default ShibaItem;
 //   <p>Name: {name}</p>
 //   {/* <button onClick={handleClick}>❤️</button> */}
 // </div>
+
+// Jokes practice:
+// let ShibaItem = (props) => {
+//   let filteredData = data.filter((jokePOJO) => {
+//     if (props.input === '') {
+//       return jokePOJO
+//     } else {
+//       return jokePOJO.joke.toLowerCase().includes(props.input)
+//     }
+//   })
+
+//   return (
+//     <div className='shiba-container'>
+//       {filteredData.map((jokes) => (
+//         <ul className='shiba-ul'>
+//             <li>
+//               <p>{jokes.joke}</p>
+//             </li>
+//         </ul>
+//       ))}
+//     </div>
+//   ) 
+// }
+  
+// export default ShibaItem; 

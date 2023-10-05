@@ -14,7 +14,7 @@ let ShibaContainer= (props) => {
   return (
     <div>
       <label>
-        Search for a joke: 
+        Search for exercise by name: 
         <input 
           name='myInput' 
           onChange={inputHandler}
