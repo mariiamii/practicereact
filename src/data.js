@@ -77,34 +77,34 @@
 
 const data = [
   {
-    "joke": "I wouldn't buy anything with velcro. It's a total rip-off."
+    joke: "I wouldn't buy anything with velcro. It's a total rip-off."
   },
   {
-    "joke": "How do you stop a bull from charging? Cancel its credit card."
+    joke: "How do you stop a bull from charging? Cancel its credit card."
   },
   {
-    "joke": "What did the janitor say when he jumped out of the closet? Supplies!"
+    joke: "What did the janitor say when he jumped out of the closet? Supplies!"
   },
   {
-    "joke": "Of all the inventions of the last 100 years, the dry erase board has to be the most remarkable."
+    joke: "Of all the inventions of the last 100 years, the dry erase board has to be the most remarkable."
   },
   {
-    "joke": "A rancher had only had 48 cows on his property, but when he rounded them up he had 50."
+    joke: "A rancher had only had 48 cows on his property, but when he rounded them up he had 50."
   },
   {
-    "joke": "Time flies like an arrow. Fruit flies like a banana…"
+    joke: "Time flies like an arrow. Fruit flies like a banana…"
   },
   {
-    "joke": "What do you call a wizard who's really bad at football? Fumbledore."
+    joke: "What do you call a wizard who's really bad at football? Fumbledore."
   },
   {
-    "joke": "I was once a personal trainer, until I gave a too-weak notice."
+    joke: "I was once a personal trainer, until I gave a too-weak notice."
   },
   {
-    "joke": "How do celebrities stay cool? They have many fans."
+    joke: "How do celebrities stay cool? They have many fans."
   },
   {
-    "joke": "My friend couldn't afford to pay his bill, so I sent him a \"Get Well Soon\" card."
+    joke: "My friend couldn't afford to pay his bill, so I sent him a \"Get Well Soon\" card."
   }
 ];
 
