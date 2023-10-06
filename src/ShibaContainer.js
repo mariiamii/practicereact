@@ -1,14 +1,18 @@
 import { React, useState } from 'react'; // declares a state variable
 import ShibaItem from './ShibaItem'
 
-// Jokes:
+// Exercise practice:
 let ShibaContainer= (props) => {
   // Syntax: const [state, setState] = useState(initialState);
-  const [inputText, setInputText] = useState("");
+  const [nameInput, setNameInput] = useState("");
+  const [difficultyInput, setDifficultyInput] = useState("");
+  const [equipmentInput, setEquipmentInput] = useState("");
 
   let inputHandler = (e) => { // event.target
     let lowerCase = e.target.value.toLowerCase();
-    setInputText(lowerCase);
+    setNameInput(lowerCase);
+    setDifficultyInput(lowerCase);
+    setEquipmentInput(lowerCase);
   }
   
   return (
@@ -20,21 +24,16 @@ let ShibaContainer= (props) => {
           onChange={inputHandler}
         />
       </label>
-      <ShibaItem input={inputText}/>
+      <ShibaItem 
+        nameInput={nameInput}
+        difficultyInput={difficultyInput}
+        equipmentInput={equipmentInput}
+      />
     </div>
   )
 }
 
 export default ShibaContainer
-
-
-
-
-
-
-
-
-
 
 
 

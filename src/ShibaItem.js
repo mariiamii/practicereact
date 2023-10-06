@@ -4,12 +4,20 @@ import data from './data.js'
 // Exercise practice:
 let ShibaItem = (props) => {
   let filteredData = data.filter((exercisePOJO) => {
-    if (props.input === '') {
-      return exercisePOJO
-    } else {
-      return exercisePOJO.name.toLowerCase().includes(props.input)
+    let name = exercisePOJO.name.toLowerCase().includes(props.nameInput);
+    let difficulty = exercisePOJO.difficulty.toLowerCase().includes(props.difficultyInput);
+    let equipment = exercisePOJO.equipment.toLowerCase().includes(props.equipmentInput);
+
+    if (props.nameInput === '' || props.difficultyInput === '' || props.equipmentInput === '') { 
+      return exercisePOJO;
+    } else if(name) {
+      return name;
+    } else if(difficulty) {
+      return difficulty;
+    } else{
+      return equipment;
     }
-  })
+  });
 
   return (
     <div className='shiba-container'>
@@ -27,15 +35,6 @@ let ShibaItem = (props) => {
 }
   
 export default ShibaItem; 
-
-
-
-
-
-
-
-
-
 
 
 
