@@ -2,14 +2,9 @@ import React from 'react';
 import data from './data.js'
 
 // Shibas:
+console.log(data)
 let ShibaItem = (props) => {
-  // let {name, image} = props // destructuring
 
-  // let handleClick = () => { // callback fn
-  //   console.log("❤️ for " + props.name)
-  // }
-
-  // console.log(props.input)
   let filteredData = data.filter((shibaItem) => {
     if (props.input === '') {
       return shibaItem
@@ -25,6 +20,7 @@ let ShibaItem = (props) => {
           <li>
             <img key={shiba.id} src={shiba.img} alt="shiba" className="shiba-img"/>
             <p>Name: {shiba.name}</p>
+            <button onClick={() => {console.log(shiba.name)}}> ❤️ </button>
           </li>
         </ul>
       ))}
